@@ -41,7 +41,11 @@ int main() {
         printf("5. Ver TAIL\n");
         printf("6. Salir\n");
         printf("Opcion: ");
-        scanf("%d", &opcion);
+    
+        while (scanf("%d", &opcion) == 0) { // Si mete letra
+            printf("Error, solo numeros: ");
+            scanf("%*s"); // Borra lo que escribió mal
+        }
 
         switch (opcion) {
 
